@@ -71,7 +71,7 @@ VALUES (
 # user_information変数
 
 sql2 = f"select * from user limit 20"
-data = session.sql2(sql).collect()
+data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
 json_data = users_df.to_json(orient='records', force_ascii=False)
