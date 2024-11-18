@@ -5,6 +5,7 @@ from snowflake.snowpark.functions import col
 import pytz
 import pandas as pd
 import json
+import sqlite3
 
 cnx = st.connection("snowflake")
 session = cnx.session
