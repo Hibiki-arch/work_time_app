@@ -72,7 +72,8 @@ VALUES (
 
 # user_information変数
 
-sql2 = f"select * from user"
+sql2 = "select * from user"
+
 data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
