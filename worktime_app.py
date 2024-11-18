@@ -5,9 +5,9 @@ from snowflake.snowpark.functions import col
 import pytz
 import pandas as pd
 import json
-session = cnx.session
 
 cnx = st.connection("snowflake")
+session = cnx.session
 
 
 timezone = pytz.timezone('Asia/Tokyo')
