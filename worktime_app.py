@@ -72,9 +72,9 @@ VALUES (
 
 # user_information変数
 
-# sql2 = "select * from user"
+sql2 = "select * from user"
 
-data = session.sql('select * from user').collect()
+data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
 json_data = users_df.to_json(orient='records', force_ascii=False)
