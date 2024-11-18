@@ -14,7 +14,7 @@ timezone = pytz.timezone('Asia/Tokyo')
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
     
-session = get_active_session()
+# session = get_active_session()
 
 # タイトル
 st.title("勤怠管理")
