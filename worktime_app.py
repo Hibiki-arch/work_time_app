@@ -16,7 +16,7 @@ timezone = pytz.timezone('Asia/Tokyo')
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
     
-# session = get_active_session()
+session = get_active_session()
 
 # タイトル
 st.title("勤怠管理")
@@ -72,7 +72,7 @@ VALUES (
 
 # user_information変数
 
-sql2 = "select * from user"
+sql2 = f"select * from user"
 data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
