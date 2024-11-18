@@ -6,9 +6,11 @@ import pytz
 import pandas as pd
 import json
 import sqlite3
+from sqlalchemy import create_engine
+session = cnx.session
 
 cnx = st.connection("snowflake")
-session = cnx.session
+
 
 timezone = pytz.timezone('Asia/Tokyo')
 
