@@ -5,9 +5,6 @@ from snowflake.snowpark.functions import col
 import pytz
 import pandas as pd
 import json
-from pyspark.sql import SparkSession
-
-spark = SparkSession.builder.appName("Example").getOrCreate()
 
 
 cnx = st.connection("snowflake")
@@ -76,8 +73,7 @@ VALUES (
 # user_information変数
 
 sql2 = f"select * from user"
-# data = session.sql(sql2).collect()
-data = spark.sql(sql2).collect()
+data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
 json_data = users_df.to_json(orient='records', force_ascii=False)
