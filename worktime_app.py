@@ -73,7 +73,7 @@ VALUES (
 
 # user_information変数
 
-sql2 = f"select * from user limit 20"
+sql2 = f"select * from user"
 data = session.sql(sql2).collect()
 users_df = pd.DataFrame(data)
 
