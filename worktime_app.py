@@ -6,6 +6,9 @@ import pytz
 import pandas as pd
 import json
 
+cnx = st.connection("snowflake")
+session = cnx.session
+
 timezone = pytz.timezone('Asia/Tokyo')
 
 if 'logged_in' not in st.session_state:
